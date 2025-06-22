@@ -8,20 +8,19 @@ import google.generativeai as genai
 load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
-print(os.getenv("GOOGLE_API_KEY"))
 
 # title and page settings
 st.set_page_config(page_title="Smart Resume Analyzer", layout="centered")
 st.title(" Smart Resume Analyzer")
 st.write("This Application helps you in your Resume Review with help of **GEMINI AI (LLM)**")
 
-# Step 1: Job Description input
+#Job Description input
 job_description = st.text_area("Job Description:", height=150)
 
-# Step 2: Upload resume
+# Upload resume
 uploaded_resume = st.file_uploader("Upload your Resume (PDF)...", type=["pdf"])
 
-# Step 3: Extract text from uploaded resume
+#Extract text from uploaded resume
 def extract_text_from_pdf(file):
     text = ""
     with pdfplumber.open(file) as pdf:
@@ -31,18 +30,18 @@ def extract_text_from_pdf(file):
                 text += page_text + "\n"
     return text
 
-# Step 4: Function to send prompt to Gemini
+#  Function to send prompt to Gemini
 def ask_gemini(prompt):
     model = genai.GenerativeModel('gemini-2.5-flash')
     response = model.generate_content(prompt)
     return response.text
 
-# Step 5: Process the resume if uploaded
+# Process the resume if uploaded
 resume_text = ""
 if uploaded_resume is not None:
     resume_text = extract_text_from_pdf(uploaded_resume)
 
-# Step 6: Add feature buttons (all in one column)
+# Add feature buttons
 if st.button("Tell Me About the Resume") and resume_text:
     st.info("Analyzing your resume...")
     prompt = f"Read this resume:\n{resume_text}\n\nTell me what this resume is about in simple language."
@@ -67,7 +66,7 @@ if st.button("Percentage match") and resume_text and job_description:
     response = ask_gemini(prompt)
     st.success(response)
 
-# Step 7: Custom question box
+# Custom question box
 custom_question = st.text_input("Any Questions?")
 if st.button("Go") and custom_question and resume_text:
     st.info("Asking your custom question...")
