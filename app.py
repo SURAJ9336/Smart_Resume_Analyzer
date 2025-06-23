@@ -1,5 +1,5 @@
 import streamlit as st
-import pdfplumber
+import pypdf
 import os
 from dotenv import load_dotenv
 import google.generativeai as genai
@@ -22,12 +22,10 @@ uploaded_resume = st.file_uploader("Upload your Resume (PDF)...", type=["pdf"])
 
 #Extract text from uploaded resume
 def extract_text_from_pdf(file):
+    reader = pypdf.PdfReader(file)
     text = ""
-    with pdfplumber.open(file) as pdf:
-        for page in pdf.pages:
-            page_text = page.extract_text()
-            if page_text:
-                text += page_text + "\n"
+    for page in reader.pages:
+        text += page.extract_text() + "\n"
     return text
 
 #  Function to send prompt to Gemini
