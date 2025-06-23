@@ -101,8 +101,7 @@ Future Improvements
 
 
 Deployment Link 
-
-👉 [Click here to try the app]()
+👉 https://resumeinsight-ai.streamlit.app/
 
 
 📄 Author
