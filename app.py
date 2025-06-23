@@ -64,6 +64,28 @@ if st.button("Percentage match") and resume_text and job_description:
     response = ask_gemini(prompt)
     st.success(response)
 
+if st.button(" Generate Interview Questions") and resume_text:
+    st.info("Generating smart interview questions...")
+
+    prompt = f"""
+    You are an AI assistant that generates interview questions based on resume content.
+    Resume: {resume_text}
+    Your Task: Generate 15 relevant interview questions (mix of technical and behavioral) based on the candidate's resume.
+    """
+    response = ask_gemini(prompt)
+    st.markdown(" AI-Generated Interview Questions:")
+    st.write(response)
+
+    st.markdown(" Download Questions")
+    st.download_button(
+        label=" Download as .txt",
+        data=response,
+        file_name="interview_questions.txt",
+        mime="text/plain"
+    )
+
+
+
 # Custom question box
 custom_question = st.text_input("Any Questions?")
 if st.button("Go") and custom_question and resume_text:
