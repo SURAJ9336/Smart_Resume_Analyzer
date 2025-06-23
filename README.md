@@ -101,8 +101,7 @@ Future Improvements
 
 
 Deployment Link 
-👉 https://resumeinsight-ai.streamlit.app/
-
+👉 https://resume-pro-analyzer.streamlit.app/
 
 📄 Author
 Suraj Kumar
