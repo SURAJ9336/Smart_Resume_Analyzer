@@ -1,24 +1,24 @@
-# 📄 Smart Resume Analyzer
+#  Smart Resume Analyzer
    Live Link - https://resume-pro-analyzer.streamlit.app/
 
 A powerful AI-driven resume analysis tool built using **Google Gemini LLM** and **Streamlit**. It compares a candidate's resume with a given job description and provides intelligent suggestions, missing keywords, skill improvements, and match percentage — helping candidates tailor their resumes more effectively for job roles.
 
 ---
 
-## 🚀 Features
+##  Features
 
-- 📂 Upload your resume in **PDF** format
-- 📝 Paste a **Job Description**
-- 📃 Get a summary of your resume in simple language
-- 📈 Get **skill improvement** suggestions based on JD
-- 🔑 Discover **keywords missing** in your resume
-- 🎯 Get a **match score (%)** with explanation
-- 💬 Ask **custom questions** about your resume
-- ⚡ Powered by **Gemini 2.5 Flash LLM**
+-  Upload your resume in **PDF** format
+-  Paste a **Job Description**
+-  Get a summary of your resume in simple language
+-  Get **skill improvement** suggestions based on JD
+-  Discover **keywords missing** in your resume
+-  Get a **match score (%)** with explanation
+-  Ask **custom questions** about your resume
+-  Powered by **Gemini 2.5 Flash LLM**
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Component      | Technology                     |
 |----------------|--------------------------------|
@@ -30,7 +30,7 @@ A powerful AI-driven resume analysis tool built using **Google Gemini LLM** and 
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 smart-resume-analyzer/
 │
@@ -45,7 +45,7 @@ smart-resume-analyzer/
 
 ---
 
-## ⚙️ How to Run Locally
+##  How to Run Locally
 
 ### 1. Clone the repository
 ```bash
@@ -84,7 +84,7 @@ Output:
 
 
 
-📌 Use Cases 
+ Use Cases 
 
 - Candidates tailoring their resume for a specific job
 - HR teams screening resumes more effectively
@@ -102,12 +102,12 @@ Future Improvements
 
 
 Deployment Link 
-👉 https://resume-pro-analyzer.streamlit.app/
+ https://resume-pro-analyzer.streamlit.app/
 
-📄 Author
+ Author
 Suraj Kumar
 Final Year | B.Tech CSE (AI & ML)
 
-🔐 License
+ License
 This project is for educational/demo purposes only.
 LLM usage must comply with Gemini API Terms of Use.
